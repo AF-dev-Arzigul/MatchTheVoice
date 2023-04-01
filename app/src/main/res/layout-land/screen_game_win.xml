@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/forest">
+
+    <LinearLayout
+        android:id="@+id/dialog"
+        android:layout_width="500dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/dialog_back"
+        android:gravity="center"
+        android:layout_marginVertical="20dp"
+        android:text="\nApp is developed by Arzigul\nNazarbaeva in 34the lesson at\nGita dasturchilar akademiyasi\nin 2022.\n\n Resources taken from\nhttps://www.freepik.com\nand https://lottiefiles.com"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:text="Congratulations!\nYou win.\nYour level is up"
+            android:gravity="center"
+            android:textSize="36sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/kalam_bold"/>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ok_btn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/info_btn"
+        android:paddingBottom="3dp"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:fontFamily="@font/kalam_regular"
+        android:translationZ="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95"
+        tools:ignore="ContentDescription,HardcodedText" />
+
+    <TextView
+        android:id="@+id/tv_coins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="+10"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:translationZ="50dp"
+        android:fontFamily="@font/kalam_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/coins"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/coins"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/coins"
+        android:translationZ="50dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_coins"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_coins"
+        app:layout_constraintTop_toTopOf="@id/tv_coins" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You win"
+        android:textColor="#FF9800"
+        android:textSize="32sp"
+        android:fontFamily="@font/kalam_bold"
+        android:textStyle="bold"
+        android:translationZ="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.09"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/forest">
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/info_btn"
+        android:paddingTop="18dp"
+        android:paddingBottom="22dp"
+        android:src="@drawable/ic_outline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/firstBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:background="@drawable/items_back"
+        android:clickable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/secondBoard"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressBar"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/progress_back"
+        android:elevation="10dp"
+        android:padding="2dp"
+        app:indicatorColor="#FED14A"
+        app:layout_constraintCircleRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:trackCornerRadius="8dp"
+        app:trackThickness="8dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/voices"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:background="@drawable/btn_back"
+        android:fontFamily="@font/kalam_regular"
+        android:paddingBottom="10dp"
+        android:text="Voices"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/firstBoard"
+        app:layout_constraintEnd_toEndOf="@id/firstBoard"
+        app:layout_constraintStart_toStartOf="@id/firstBoard"
+        app:layout_constraintTop_toTopOf="@id/firstBoard"
+        tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/level"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:background="@drawable/btn_back"
+        android:fontFamily="@font/kalam_regular"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="10dp"
+        android:text="Level 1"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/firstBoard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressBar"
+        tools:ignore="HardcodedText" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardFirst"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toTopOf="@id/cardThird"
+        app:layout_constraintEnd_toStartOf="@id/cardSecond"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/firstBoard"
+        app:layout_constraintTop_toTopOf="@id/firstBoard"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <ImageView
+            android:id="@+id/iv_first"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/card"
+            tools:ignore="ContentDescription" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSecond"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toTopOf="@id/cardFour"
+        app:layout_constraintEnd_toEndOf="@id/firstBoard"
+        app:layout_constraintStart_toEndOf="@id/cardFirst"
+        app:layout_constraintTop_toTopOf="@id/firstBoard"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <ImageView
+            android:id="@+id/iv_second"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/card"
+            tools:ignore="ContentDescription" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardThird"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="2dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/firstBoard"
+        app:layout_constraintEnd_toStartOf="@id/cardFour"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/firstBoard"
+        app:layout_constraintTop_toBottomOf="@id/cardFirst">
+
+        <ImageView
+            android:id="@+id/iv_third"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/card"
+            tools:ignore="ContentDescription" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardFour"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="2dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/firstBoard"
+        app:layout_constraintEnd_toEndOf="@id/firstBoard"
+        app:layout_constraintStart_toEndOf="@id/cardThird"
+        app:layout_constraintTop_toBottomOf="@id/cardSecond">
+
+        <ImageView
+            android:id="@+id/iv_four"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/card"
+            tools:ignore="ContentDescription" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/secondBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:background="@drawable/items_back"
+        android:clickable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/firstBoard" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/images"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:background="@drawable/btn_back"
+        android:fontFamily="@font/kalam_regular"
+        android:paddingBottom="10dp"
+        android:text="Images"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/secondBoard"
+        app:layout_constraintEnd_toEndOf="@id/secondBoard"
+        app:layout_constraintStart_toStartOf="@id/secondBoard"
+        app:layout_constraintTop_toTopOf="@id/secondBoard"
+        tools:ignore="HardcodedText" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardFirstS"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toTopOf="@id/cardThirdS"
+        app:layout_constraintEnd_toStartOf="@id/cardSecondS"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/secondBoard"
+        app:layout_constraintTop_toTopOf="@id/secondBoard"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <ImageView
+            android:id="@+id/iv_firstS"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/card"
+            tools:ignore="ContentDescription" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSecondS"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toTopOf="@id/cardFourS"
+        app:layout_constraintEnd_toEndOf="@id/secondBoard"
+        app:layout_constraintStart_toEndOf="@id/cardFirstS"
+        app:layout_constraintTop_toTopOf="@id/secondBoard"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <ImageView
+            android:id="@+id/iv_secondS"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/card"
+            tools:ignore="ContentDescription" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardThirdS"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="2dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/secondBoard"
+        app:layout_constraintEnd_toStartOf="@id/cardFourS"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/secondBoard"
+        app:layout_constraintTop_toBottomOf="@id/cardFirstS">
+
+        <ImageView
+            android:id="@+id/iv_thirdS"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/card"
+            tools:ignore="ContentDescription" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardFourS"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="2dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/secondBoard"
+        app:layout_constraintEnd_toEndOf="@id/secondBoard"
+        app:layout_constraintStart_toEndOf="@id/cardThirdS"
+        app:layout_constraintTop_toBottomOf="@id/cardSecondS">
+
+        <ImageView
+            android:id="@+id/iv_fourS"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/card"
+            tools:ignore="ContentDescription" />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/ll_coin"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:background="@drawable/btn_back"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/level"
+        app:layout_constraintStart_toStartOf="@id/level"
+        app:layout_constraintTop_toBottomOf="@id/level">
+
+        <TextView
+            android:id="@+id/tv_coins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/kalam_regular"
+            android:paddingBottom="5dp"
+            android:text="+10"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/coins"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/coins"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
